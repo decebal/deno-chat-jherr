@@ -9,7 +9,7 @@ export default function Home() {
   const [text, setText] = useState("");
 
   const getMessages = useCallback(async () => {
-    const res = await fetch("https://jherr-deno-chat-api.deno.dev/messages");
+    const res = await fetch("https://dd-deno-chat-api.deno.dev/messages");
     const data = await res.json();
     setMessages(data);
   }, []);
@@ -19,7 +19,7 @@ export default function Home() {
   }, []);
 
   const onSendMessage = useCallback(async () => {
-    await fetch("https://jherr-deno-chat-api.deno.dev/messages", {
+    await fetch("https://dd-deno-chat-api.deno.dev/messages", {
       method: "POST",
       headers: {
         "content-type": "application/json",
